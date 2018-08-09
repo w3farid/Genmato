@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+	    <!-- Remove core navigation menu -->
+	    <referenceBlock name="catalog.topnav" remove="true" />
+	    
+	    <!-- Remove unused blocks in sidebar -->
+	    <referenceBlock name="catalog.compare.sidebar" remove="true" />
+	    <referenceBlock name="sale.reorder.sidebar" remove="true" />
+	    <referenceBlock name="wishlist_sidebar" remove="true" />
+	    
+	    <!-- Remove core authentication popup -->
+	    <referenceBlock name="authentication-popup" remove="true" />
+	    
+	    <!-- Replace footer -->
+	    <referenceBlock name="report.bugs" remove="true" />
+	    <referenceBlock name="footer_links" remove="true" />
+	    <referenceBlock name="copyright" remove="true" />
+	    <referenceBlock name="form.subscribe" remove="true" />
+	    
+	    <referenceContainer name="footer">
+	        <block class="Magento\Framework\View\Element\Template" name="vatogo.footer" template="Magento_Theme::html/footer.phtml" />
+	    </referenceContainer>
+    </body>
+</page>
